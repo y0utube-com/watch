@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET CHAT ID</title>
+    <link rel="icon" type="image/x-icon" href="./logo.png">
+    <link rel="stylesheet" href="./getid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="centered-content" >
+            <!--main card-->
+            <div class="card menuCard">
+                <div class="card-body">
+                    <div class="input-group mb-3" >
+                        <input  type="password" class="form-control appInput" id="botTokenInput" placeholder="Bot Token .. " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Reload updates" ><span class="input-group-text buttonLabel2"   id="updateMessages"><i class="bi bi-arrow-clockwise"></i></span></span>
+                        <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Start Bot"><span class="input-group-text buttonLabel" id="startBotButton"><i class="bi bi-play-fill"></i> Start</span></span>
+                      </div>
+                      <div class="alert alert-success alertMessage" role="alert" id="procedureMessage"></div>
+                      <hr>
+                      <input  type="text" class="form-control appInput baseUrl" id="urlInput" placeholder="base url.." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <input  type="text" class="form-control appInput baseUrl" id="videoId" placeholder="youtube video id.." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      
+                      <ul class="list-group chaidList" id="chaidList">
+                      </ul>
+                      <br>
+                      <div class="checkBox-panel">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="locationCheckbox">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Location
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input type="checkbox" id="cameraCheckbox" class="form-check-input">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Camera
+                            </label>
+                          </div>
+                        
+                      </div>
+
+                      <input  type="text" class="form-control appInput" id="url_result" placeholder="url result .. " aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <br>
+                      <button type="button" class="btn btn-primary copyButton"  id="copy_to_clipboard"><i class="bi bi-clipboard-plus"></i> Copy</button>
+                    </div>
+            </div>
+            <!--main card end-->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./getid.js"></script>
+</body>
+</html>

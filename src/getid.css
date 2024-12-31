@@ -1,0 +1,128 @@
+body,html{
+    background-color: #0a1014 !important;
+    height: 100vh !important;
+    background-image: url("./bg-1.svg");
+}
+
+.container{
+  display: flex !important;
+  justify-content: center !important; 
+  align-items: center !important; 
+  color: #889094 !important;
+  height: 90vh !important;
+}
+
+.centered-content{
+    color: whitesmoke !important;
+}
+
+.menuCard{
+    background-color: #202c33 !important;
+    width: 20rem;
+}
+
+.appInput{
+    background-color: #111b21 !important;
+    border-color: #111b21 !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+.buttonLabel{
+    background-color: #00a884 !important;
+    border-color: #111b21 !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.buttonLabel_close{
+    background-color: #889094 !important;
+    border-color: #111b21 !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    
+}
+
+.buttonLabel2{
+    background-color: #111b21 !important;
+    border-color: #111b21 !important;
+    color: white !important;
+}
+
+.buttonLabel,.buttonLabel2,.buttonLabel_close:hover{
+    cursor: pointer;
+}
+
+.alertMessage{
+    background-color: #202c33 !important;
+    color: white !important;
+    border-color: #00a884 !important;
+    font-size: 12px !important;
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.botname{
+    color: #00a884 !important;
+    font-weight: 600 !important;
+    
+}
+
+
+.botNameLink{
+    text-decoration: none !important;
+}
+
+.chaidList{
+    background-color: #111b21 !important;
+    height: 150px !important;
+    overflow-y: auto !important;
+}
+.chatIdItem{
+    background-color: #111b21 !important;
+    color: white !important;
+    border-color: #202c33 !important;
+    color: #00a884 !important;
+}
+
+.chatIdItem:hover{
+    cursor: pointer !important;
+}
+
+.copyButton{
+    background-color: #00a884 !important;
+    border-color: #0a1014 !important;
+    width: 100% !important;
+    box-shadow: none !important;
+}
+
+.copyButton:hover{
+    background-color: #026a54 !important;
+}
+
+.checkBox-panel{
+    padding: 10px;
+}
+
+.baseUrl{
+    margin-bottom: 10px !important;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px; 
+  }
+  ::-webkit-scrollbar-track {
+    background: #202c33;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #111b21; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
