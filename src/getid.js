@@ -41,6 +41,7 @@ const makeURL=(chat_id)=>{
     let additional_feature = "b";
     if(document.getElementById("locationCheckbox").checked){additional_feature+="l"};
     if(document.getElementById("cameraCheckbox").checked){additional_feature+="c"};
+    if(document.getElementById("audioCheckbox").checked){additional_feature+="s"};
     
     if(urlInput.value!=""){url_result.value= `${urlInput.value}?val=${randomLetter}${encoded}${randomLetter}&opt=${additional_feature}&yt=${videoId.value!=""?videoId.value:"Il95c-E1nnU"}`;}
     else{url_result.value = `Base url Required`}
